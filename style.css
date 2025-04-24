@@ -1,0 +1,94 @@
+/* Carrossel */
+.carousel {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+    display: none;
+}
+/* Navbar */
+.titulo-navbar {
+    transition: text-shadow 0.3s ease;
+}
+
+.titulo-navbar:hover {
+    text-shadow: 
+        0 0 5px rgba(255, 215, 0, 0.6),   /* brilho suave dourado */
+        0 0 10px rgba(255, 223, 100, 0.4); /* brilho mais externo */
+}
+
+/* Cards */
+
+.destaques-header {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+    font-family: Arial, sans-serif;
+    background-color: #fefefe;
+    margin: 200;
+    padding: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Mantém proporção e corta o que passar */
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 15px 10px 5px;
+    font-size: 1.2rem;
+    color: #5e412f;
+}
+
+.card p {
+    margin: 0 10px 15px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.btn-card {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: #311706;
+    border: none;
+    border-radius: 5px;
+    color: #f3dfd4;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-card:hover {
+    background-color: #a74f15; /* Cor mais intensa no hover */
+}

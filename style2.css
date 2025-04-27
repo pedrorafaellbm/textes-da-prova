@@ -1,16 +1,18 @@
 /* Estilo para a Navbar */
 .titulo-navbar {
-    transition: text-shadow .3s ease;
+    transition: text-shadow 0.3s ease;
 }
 .titulo-navbar:hover {
-    text-shadow: 0 0 5px rgba(255,215,0,.6), 0 0 10px rgba(255,223,100,.4);
+    text-shadow: 0 0 5px rgba(255,215,0,0.6), 0 0 10px rgba(255,223,100,0.4);
 }
 
+/* Cabeçalhos de sessão */
 .destaques-header {
     padding: 20px 20px;
     text-align: center;
+    font-weight: bold;
+    font-size: 24px;
 }
-
 
 /* Estilos gerais */
 body {
@@ -23,64 +25,80 @@ body {
     flex-direction: column;
 }
 
+/* Container para os cards */
 .container {
-    flex-grow: 1; /* Faz com que os cards ocupem a maior parte possível da altura */
+    flex-grow: 1;
 }
 
-/* Estilo para os Cards */
+/* Estilo dos cards */
 .card {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 9px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
+/* Imagem do card */
 .card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que as imagens tenham o mesmo tamanho e não distorçam */
-    max-height: 200px; /* Limita a altura da imagem */
-    border-radius: 10px;
+    object-fit: cover;
+    max-height: 200px;
+    border-radius: 10px 0 0 10px;
 }
 
-/* Estilo do conteúdo do card */
+/* Corpo do card */
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* Distribui o conteúdo de forma equilibrada */
+    justify-content: space-evenly;
     padding: 20px;
     height: 100%;
 }
 
-/* Ajustar a margem entre o nome do produto e a descrição */
 .card-body h5,
 .card-body p {
-    margin-bottom: 5px; /* Diminuímos a margem entre o título e a descrição */
+    margin-bottom: 5px;
 }
 
-/* Estilo para os botões */
+/* Botão personalizado */
 .botao-cor {
-    background-color: #311706; /* Cor do botão alterada para #311706 */
+    background-color: #311706;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    padding: 8px 16px; /* Tamanho do botão reduzido */
-    font-size: 14px;  /* Fonte um pouco menor */
-    width: auto;  /* Não estica o botão */
-    max-width: 150px; /* Limita a largura máxima */
+    padding: 8px 16px;
+    font-size: 14px;
+    width: auto;
+    max-width: 150px;
     transition: background-color 0.3s ease;
 }
 
 .botao-cor:hover {
-    background-color: #a74f15; /* Cor do botão ao passar o mouse */
+    background-color: #a74f15;
 }
 
 .botao-cor:active {
-    background-color: #2c1500; /* Cor do botão ao ser clicado */
+    background-color: #2c1500;
 }
 
 /* Espaçamento entre os cards */
 .mb-4 {
     margin-bottom: 1.5rem;
+}
+
+/* Responsividade (opcional para mobile) */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card-img {
+        border-radius: 10px 10px 0 0;
+        max-height: 300px;
+    }
 }

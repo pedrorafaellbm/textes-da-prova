@@ -102,3 +102,10 @@ body {
         max-height: 300px;
     }
 }
+
+.preco-produto {
+    font-weight: bold;
+    color: #5c3d1b;
+    font-size: 1.1rem;
+    margin-left: 15px;
+  }
